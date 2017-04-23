@@ -1,0 +1,3 @@
+rootProject.name = 'billBreak'
+
+include ':app'
