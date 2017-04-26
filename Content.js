@@ -1,16 +1,26 @@
+/* @flow */
+
 import React, { Component } from 'react';
+import DeleteBill from './DeleteBill'
+
 import {
   View,
+  TextInput,
   Text,
   StyleSheet,
-  TouchableOpacity
 } from 'react-native';
 
-export default class MyComponent extends Component {
+class Content extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <TouchableOpacity style={styles.button}>+</TouchableOpacity>
+      <View>
+          <DeleteBill noBill={this.props.noBill}/>
+        <View style={styles.container}>
+          <TextInput
+            style={styles.input}
+            keyboardType = 'numeric'
+            placeholder="bool"/>
+        </View>
       </View>
     );
   }
@@ -18,11 +28,16 @@ export default class MyComponent extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center"
   },
-  button : {
-    width: 10,
-    height: 10,
-    justifyContent: "center"
+  input: {
+    flex: 1,
+    marginLeft: 16,
+    marginTop: 100,
+    height: 20
   }
 });
+
+export default Content;
