@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Content from './Content'
-import AddBill from './AddBill'
+import Content from './bill/Content'
+import AddBill from './bill/AddBill'
 
 
 import {
